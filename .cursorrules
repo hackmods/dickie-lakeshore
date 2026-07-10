@@ -1,0 +1,24 @@
+# Project: Dickie Lakeshore Portfolio
+# Client: Richard Gibbs (65-year-old comedian, non-technical)
+
+## Tech Stack Rules (STRICT)
+- Use ONLY Vanilla HTML5, Vanilla JavaScript, and Tailwind CSS (via CDN).
+- NO build tools, NO Node.js, NO React, NO bundlers, NO npm. 
+- The site must be able to run by simply double-clicking `index.html`.
+- Keep code extremely simple, semantic, and well-commented.
+
+## Visual Identity
+- Vibe: Canadian cottage country, rustic, classic stand-up.
+- Colors: 
+  - Primary: "Canadian Red" (#c8102e)
+  - Secondary: "Midnight Blue" (#00203f)
+  - Background: "Crisp Off-White" (#f9f9f9)
+- Typography: Playfair Display (Headers), Inter (Body).
+
+## Core Functionality: The Shows List
+- Upcoming shows are dynamically loaded via Vanilla JS.
+- Data source: A published Google Sheets CSV URL.
+- DO NOT suggest complex databases or backends.
+
+## Context 
+When writing code or suggesting changes, remember the end user is not tech-savvy. Solutions must be maintenance-free or use the Google Sheets CSV trick.
