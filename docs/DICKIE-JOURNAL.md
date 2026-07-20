@@ -27,6 +27,7 @@ Living document for Ryan ↔ Dickie conversations and for AI/agents working on t
 | Region | Niagara, Ontario | Press |
 | Podcast circle | Talkin' Funny | Press |
 | Talkin' Funny Facebook | https://www.facebook.com/profile.php?id=61587689854406 | Ryan / page |
+| Talkin' Funny flyer | `press/talkin-funny-info-flyer.pdf` (Info flyer 1.0) | Ryan Downloads |
 | Show runner | Produces nights at multiple Niagara venues; some recurring | Ryan |
 | Press photos | Fort Erie Radio / Andrew Hawlitzky — credited on site | Articles |
 | Featured clip | Spotlight set w/ Ryan Morris — `LYTE6BoJhq4` | YouTube |

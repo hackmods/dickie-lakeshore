@@ -25,4 +25,11 @@ Articles:
 ## Social
 
 - Instagram: https://www.instagram.com/dickie.lakeshore/
+- Talkin' Funny Facebook: https://www.facebook.com/profile.php?id=61587689854406
 - Real name confirmed in press: Richard Gibbs
+
+## Flyers
+
+| File | Description |
+|------|-------------|
+| `press/talkin-funny-info-flyer.pdf` | Talkin' Funny info flyer 1.0 (linked from site `#talkin-funny`) |
