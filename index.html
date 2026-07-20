@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dickie Lakeshore | Comedian</title>
-  <meta name="description" content="Dickie Lakeshore — Canadian cottage country comedian. Watch clips, see upcoming shows, and get in touch.">
+  <meta name="description" content="Dickie Lakeshore (Richard Gibbs) — Niagara stand-up comedian. Watch clips, see upcoming shows, and book a gig.">
 
-  <!-- Google Fonts: Playfair Display (headings) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -33,15 +31,13 @@
 </head>
 <body class="bg-off-white text-midnight-blue font-sans antialiased">
 
-  <!-- Site header with logo and navigation -->
   <header class="sticky top-0 z-50 bg-off-white/95 backdrop-blur border-b-2 border-canadian-red/20">
     <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
       <a href="#" class="flex items-center gap-3">
-        <!-- Drop your logo file at img/logo.jpg -->
         <img
           src="img/logo.jpg"
           alt="Dickie Lakeshore"
-          class="h-12 w-12 rounded-full object-cover border-2 border-canadian-red"
+          class="h-12 w-12 rounded-full object-cover border-2 border-canadian-red bg-white"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
         <span class="hidden h-12 w-12 rounded-full bg-midnight-blue text-off-white items-center justify-center font-display text-lg border-2 border-canadian-red">DL</span>
@@ -51,6 +47,7 @@
         <ul class="flex flex-wrap gap-4 sm:gap-8 text-sm sm:text-base font-medium">
           <li><a href="#clips" class="hover:text-canadian-red transition-colors">Clips</a></li>
           <li><a href="#shows" class="hover:text-canadian-red transition-colors">Shows</a></li>
+          <li><a href="#press" class="hover:text-canadian-red transition-colors">Press</a></li>
           <li><a href="#merch" class="hover:text-canadian-red transition-colors">Merch</a></li>
         </ul>
       </nav>
@@ -58,66 +55,149 @@
   </header>
 
   <main>
-    <!-- Hero section -->
-    <section class="border-b border-midnight-blue/10">
-      <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-midnight-blue leading-tight max-w-3xl mx-auto">
-          Hi, I'm Dickie Lakeshore. I like to make you laugh.
+    <!-- Full-bleed hero with live performance photo -->
+    <section class="relative min-h-[85vh] flex items-end sm:items-center border-b border-midnight-blue/10 overflow-hidden">
+      <img
+        src="img/hero.jpg"
+        alt="Dickie Lakeshore performing stand-up at a Niagara legion hall"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-midnight-blue/90 via-midnight-blue/55 to-midnight-blue/25"></div>
+      <div class="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 w-full">
+        <p class="text-off-white/80 text-sm sm:text-base tracking-wide uppercase mb-3">Richard Gibbs · Niagara stand-up</p>
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-off-white leading-tight max-w-3xl">
+          Dickie Lakeshore
         </h1>
-        <p class="mt-6 text-lg text-midnight-blue/70 max-w-xl mx-auto">
-          Classic stand-up with a cottage country soul — from Muskoka to the main stage.
+        <p class="mt-4 text-lg sm:text-xl text-off-white/90 max-w-xl">
+          Hi, I'm Dickie Lakeshore. I like to make you laugh.
         </p>
-        <a
-          href="mailto:richard.gibbs2016@gmail.com?subject=Booking%20Inquiry"
-          class="inline-block mt-8 bg-canadian-red hover:bg-red-800 text-white font-semibold py-3 px-6 rounded transition-colors"
-        >
-          Hire Me
-        </a>
+        <p class="mt-3 text-base text-off-white/70 max-w-xl">
+          Classic stand-up from the Niagara circuit — Legions, Yuk Yuk's, Spotlight, and the Talkin' Funny podcast.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="mailto:richard.gibbs2016@gmail.com?subject=Booking%20Inquiry"
+            class="inline-block bg-canadian-red hover:bg-red-800 text-white font-semibold py-3 px-6 rounded transition-colors"
+          >
+            Hire Me
+          </a>
+          <a
+            href="#shows"
+            class="inline-block border border-off-white/50 hover:border-off-white text-off-white font-semibold py-3 px-6 rounded transition-colors"
+          >
+            See Shows
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Clips section: two YouTube embeds -->
+    <!-- Quote / about -->
+    <section class="py-12 border-b border-midnight-blue/10 bg-white/60">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <blockquote class="font-display text-2xl sm:text-3xl text-midnight-blue leading-snug">
+          “When people are laughing and having a beverage, they’re generous and they’re happy.”
+        </blockquote>
+        <p class="mt-4 text-midnight-blue/60 text-sm">
+          — Dickie Lakeshore, Fort Erie Radio comedy fundraiser
+          · <a class="underline hover:text-canadian-red" href="https://forterieradio.ca/funny-money-legion-laughs-fund-fort-eries-only-daily-news-desk/" target="_blank" rel="noopener">Read the story</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Clips: real YouTube embeds found online -->
     <section id="clips" class="py-16 sm:py-20 border-b border-midnight-blue/10">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-10">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-3">
           Clips
         </h2>
+        <p class="text-center text-midnight-blue/60 mb-10 max-w-2xl mx-auto">
+          Live sets and podcast appearances from the Niagara comedy scene.
+        </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="aspect-video w-full rounded-lg overflow-hidden shadow-md border border-midnight-blue/10">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Dickie Lakeshore comedy clip 1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+          <div>
+            <div class="aspect-video w-full rounded-lg overflow-hidden shadow-md border border-midnight-blue/10">
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/LYTE6BoJhq4"
+                title="Trader Jokes #3 — Ryan Morris and Dickie Lakeshore at Spotlight Comedy Club"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="mt-3 text-sm text-midnight-blue/70">Spotlight Comedy Club — with Ryan Morris</p>
           </div>
-          <div class="aspect-video w-full rounded-lg overflow-hidden shadow-md border border-midnight-blue/10">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Dickie Lakeshore comedy clip 2"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+          <div>
+            <div class="aspect-video w-full rounded-lg overflow-hidden shadow-md border border-midnight-blue/10">
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/Ro0vHpUQxL4"
+                title="Talkin' Funny podcast Episode 20"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="mt-3 text-sm text-midnight-blue/70">Talkin' Funny podcast — Episode 20</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Coming Up: shows loaded dynamically from CSV -->
+    <!-- Coming Up -->
     <section id="shows" class="py-16 sm:py-20 border-b border-midnight-blue/10 bg-white/50">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-10">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-3">
           Coming Up
         </h2>
+        <p class="text-center text-midnight-blue/60 mb-10 max-w-xl mx-auto">
+          Schedule lives in <code class="text-sm bg-midnight-blue/5 px-1 rounded">shows.csv</code> —
+          see <strong>HOW-TO-UPDATE-SHOWS.txt</strong> in this project folder.
+        </p>
         <div id="shows-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <p class="text-midnight-blue/60 col-span-full text-center">Loading shows…</p>
         </div>
       </div>
     </section>
 
-    <!-- Merch placeholder grid -->
+    <!-- Press / gallery from Fort Erie Radio coverage -->
+    <section id="press" class="py-16 sm:py-20 border-b border-midnight-blue/10">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-3">
+          Press
+        </h2>
+        <p class="text-center text-midnight-blue/60 mb-10">
+          Local coverage from Fort Erie Radio and the Niagara circuit.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <figure>
+            <img
+              src="img/press/forterie-radio-promo.jpg"
+              alt="Dickie Lakeshore joins Fort Erie Radio Jones and Tyrrell"
+              class="w-full rounded-lg shadow-md object-cover aspect-[4/3]"
+            >
+            <figcaption class="mt-3 text-sm text-midnight-blue/60">
+              Fort Erie Radio promo — Jones &amp; Tyrrell
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/press/lineup-legion.jpg"
+              alt="Niagara comedians including Dickie Lakeshore on stage at Legion Branch 71"
+              class="w-full rounded-lg shadow-md object-cover aspect-[4/3]"
+            >
+            <figcaption class="mt-3 text-sm text-midnight-blue/60">
+              Legion Branch 71 lineup — photo: Andrew Hawlitzky / Fort Erie Radio
+            </figcaption>
+          </figure>
+        </div>
+        <p class="mt-8 text-center text-sm text-midnight-blue/50">
+          <a class="underline hover:text-canadian-red" href="https://forterieradio.ca/funny-money-legion-laughs-fund-fort-eries-only-daily-news-desk/" target="_blank" rel="noopener">Funny money: Legion laughs fund Fort Erie’s news desk</a>
+          ·
+          <a class="underline hover:text-canadian-red" href="https://forterieradio.ca/fort-erie-radio-comedy-night-supports-local-journalism-may-22/" target="_blank" rel="noopener">May 22 comedy night</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Merch placeholders -->
     <section id="merch" class="py-16 sm:py-20 border-b border-midnight-blue/10">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-10">
@@ -138,7 +218,7 @@
               Hat
             </div>
             <div class="p-5">
-              <h3 class="font-display text-xl font-semibold">Cottage Cap</h3>
+              <h3 class="font-display text-xl font-semibold">FUNNY Cap</h3>
               <p class="mt-2 text-midnight-blue/60">Coming Soon</p>
             </div>
           </article>
@@ -156,7 +236,6 @@
     </section>
   </main>
 
-  <!-- Footer with contact info and social links -->
   <footer id="footer" class="bg-midnight-blue text-off-white py-12">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="font-display text-2xl font-bold mb-6">Get in Touch</h2>
@@ -171,12 +250,12 @@
         </a>
       </p>
       <div class="flex justify-center gap-6 text-sm">
-        <a href="#" class="hover:text-canadian-red transition-colors" aria-label="Facebook">Facebook</a>
-        <a href="#" class="hover:text-canadian-red transition-colors" aria-label="Instagram">Instagram</a>
-        <a href="#" class="hover:text-canadian-red transition-colors" aria-label="YouTube">YouTube</a>
+        <a href="https://www.instagram.com/dickie.lakeshore/" class="hover:text-canadian-red transition-colors" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://www.youtube.com/watch?v=LYTE6BoJhq4" class="hover:text-canadian-red transition-colors" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+        <a href="https://forterieradio.ca/" class="hover:text-canadian-red transition-colors" target="_blank" rel="noopener" aria-label="Fort Erie Radio">Fort Erie Radio</a>
       </div>
       <p class="mt-10 text-off-white/50 text-sm">
-        &copy; <span id="year"></span> Dickie Lakeshore. All rights reserved.
+        &copy; <span id="year"></span> Dickie Lakeshore (Richard Gibbs). All rights reserved.
       </p>
     </div>
   </footer>
