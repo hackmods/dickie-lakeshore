@@ -26,6 +26,8 @@ Living document for Ryan ↔ Dickie conversations and for AI/agents working on t
 | Instagram | https://www.instagram.com/dickie.lakeshore/ | Web |
 | Region | Niagara, Ontario | Press |
 | Podcast circle | Talkin' Funny | Press |
+| Talkin' Funny Facebook | https://www.facebook.com/profile.php?id=61587689854406 | Ryan / page |
+| Show runner | Produces nights at multiple Niagara venues; some recurring | Ryan |
 | Press photos | Fort Erie Radio / Andrew Hawlitzky — credited on site | Articles |
 | Featured clip | Spotlight set w/ Ryan Morris — `LYTE6BoJhq4` | YouTube |
 | Podcast clip | Talkin' Funny Ep 20 — `Ro0vHpUQxL4` | YouTube |
@@ -80,6 +82,10 @@ Check a box when answered. Paste Dickie’s answer under the line.
   - Answer:
 - [ ] Recurring rooms (Yuk Yuk’s, Spotlight, etc.)?
   - Answer:
+- [ ] Show-runner venues: exact names, cadence (monthly?), and which are recurring vs one-offs?
+  - Answer:
+- [ ] Should “Shows I Run” list ticket links or just descriptions?
+  - Answer:
 
 ### Media
 
@@ -114,6 +120,13 @@ Check a box when answered. Paste Dickie’s answer under the line.
 
 Add a new entry after each conversation or site decision.
 
+### 2026-07-20 — Show runner + Talkin’ Funny shout-out (Ryan)
+
+- Expanded **About Me** with first-person bio (flubbed years/venues — TODO for Dickie).
+- Added **Shows I Run** section (recurring + specials placeholders).
+- Added **Talkin’ Funny** shout-out linking to Facebook page `id=61587689854406`.
+- Still need: real show-runner venue names and cadence from Dickie.
+
 ### 2026-07-20 — Site build / SEO pass (Ryan + agent)
 
 - Shipped SEO meta, About, Book Me; removed online Merch section.
@@ -134,8 +147,9 @@ Add a new entry after each conversation or site decision.
 | When Dickie answers… | Update these files / sections |
 |----------------------|--------------------------------|
 | Bio / tagline | `index.html` → `#about`, hero |
+| Show runner venues | `index.html` → `#show-runner` |
+| Talkin' Funny / socials | `index.html` → `#talkin-funny`, footer, JSON-LD `sameAs` |
 | Booking (venues, rates, travel) | `index.html` → `#book` |
-| Best clips | `index.html` → `#clips` iframes + JSON-LD `sameAs` |
 | Show dates | `shows.csv` (or Google Sheet + `SHOWS_CSV_URL` in `app.js`) |
 | Social links | `index.html` footer + JSON-LD `sameAs` |
 | New photos | `img/hero.jpg`, `img/press/…`, `docs/CREDITS.md` |
