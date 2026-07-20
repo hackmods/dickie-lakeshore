@@ -150,6 +150,7 @@ Add a new entry after each conversation or site decision.
 | Show runner venues | `index.html` → `#show-runner` |
 | Talkin' Funny / socials | `index.html` → `#talkin-funny`, footer, JSON-LD `sameAs` |
 | Booking (venues, rates, travel) | `index.html` → `#book` |
+| Best clips | `index.html` → `#clips` iframes + JSON-LD `sameAs` |
 | Show dates | `shows.csv` (or Google Sheet + `SHOWS_CSV_URL` in `app.js`) |
 | Social links | `index.html` footer + JSON-LD `sameAs` |
 | New photos | `img/hero.jpg`, `img/press/…`, `docs/CREDITS.md` |
