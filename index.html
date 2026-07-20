@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dickie Lakeshore | Comedian</title>
-  <meta name="description" content="Dickie Lakeshore (Richard Gibbs) — Niagara stand-up comedian. Watch clips, see upcoming shows, and book a gig.">
+  <!-- SITE_URL: update canonical/og:url when a public domain is set -->
+  <title>Dickie Lakeshore | Niagara Stand-Up Comedian</title>
+  <meta name="description" content="Dickie Lakeshore (Richard Gibbs) is a Niagara stand-up comedian. Watch clips, see upcoming shows, and book a gig for clubs, Legions, and fundraisers.">
+  <meta name="theme-color" content="#00203f">
+  <link rel="canonical" href="http://192.168.0.61/">
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dickie Lakeshore | Niagara Stand-Up Comedian">
+  <meta property="og:description" content="Classic stand-up from the Niagara circuit. Book Dickie Lakeshore for your next show.">
+  <meta property="og:url" content="http://192.168.0.61/">
+  <meta property="og:image" content="http://192.168.0.61/img/hero.jpg">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dickie Lakeshore | Niagara Stand-Up Comedian">
+  <meta name="twitter:description" content="Classic stand-up from the Niagara circuit. Book Dickie Lakeshore for your next show.">
+  <meta name="twitter:image" content="http://192.168.0.61/img/hero.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +46,35 @@
       },
     };
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dickie Lakeshore",
+    "alternateName": "Richard Gibbs",
+    "jobTitle": "Stand-up Comedian",
+    "description": "Niagara stand-up comedian performing at Legions, comedy clubs, and fundraisers.",
+    "url": "http://192.168.0.61/",
+    "image": "http://192.168.0.61/img/hero.jpg",
+    "email": "mailto:richard.gibbs2016@gmail.com",
+    "telephone": "+1-905-714-3622",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Niagara Region, Ontario"
+    },
+    "sameAs": [
+      "https://www.instagram.com/dickie.lakeshore/",
+      "https://www.youtube.com/watch?v=LYTE6BoJhq4"
+    ]
+  }
+  </script>
 </head>
 <body class="bg-off-white text-midnight-blue font-sans antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-canadian-red focus:text-white focus:px-4 focus:py-2 focus:rounded">
+    Skip to content
+  </a>
 
   <header class="sticky top-0 z-50 bg-off-white/95 backdrop-blur border-b-2 border-canadian-red/20">
     <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
@@ -44,18 +89,19 @@
         <span class="font-display text-xl font-bold text-midnight-blue">Dickie Lakeshore</span>
       </a>
       <nav aria-label="Main navigation">
-        <ul class="flex flex-wrap gap-4 sm:gap-8 text-sm sm:text-base font-medium">
+        <ul class="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base font-medium">
+          <li><a href="#about" class="hover:text-canadian-red transition-colors">About</a></li>
           <li><a href="#clips" class="hover:text-canadian-red transition-colors">Clips</a></li>
           <li><a href="#shows" class="hover:text-canadian-red transition-colors">Shows</a></li>
+          <li><a href="#book" class="hover:text-canadian-red transition-colors">Book</a></li>
           <li><a href="#press" class="hover:text-canadian-red transition-colors">Press</a></li>
-          <li><a href="#merch" class="hover:text-canadian-red transition-colors">Merch</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Full-bleed hero with live performance photo -->
+  <main id="main">
+    <!-- Hero -->
     <section class="relative min-h-[85vh] flex items-end sm:items-center border-b border-midnight-blue/10 overflow-hidden">
       <img
         src="img/hero.jpg"
@@ -68,6 +114,7 @@
         <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-off-white leading-tight max-w-3xl">
           Dickie Lakeshore
         </h1>
+        <!-- TODO: Dickie journal — confirm tagline -->
         <p class="mt-4 text-lg sm:text-xl text-off-white/90 max-w-xl">
           Hi, I'm Dickie Lakeshore. I like to make you laugh.
         </p>
@@ -91,20 +138,47 @@
       </div>
     </section>
 
-    <!-- Quote / about -->
-    <section class="py-12 border-b border-midnight-blue/10 bg-white/60">
-      <div class="max-w-3xl mx-auto px-4 text-center">
-        <blockquote class="font-display text-2xl sm:text-3xl text-midnight-blue leading-snug">
-          “When people are laughing and having a beverage, they’re generous and they’re happy.”
-        </blockquote>
-        <p class="mt-4 text-midnight-blue/60 text-sm">
-          — Dickie Lakeshore, Fort Erie Radio comedy fundraiser
-          · <a class="underline hover:text-canadian-red" href="https://forterieradio.ca/funny-money-legion-laughs-fund-fort-eries-only-daily-news-desk/" target="_blank" rel="noopener">Read the story</a>
-        </p>
+    <!-- About -->
+    <section id="about" class="py-16 sm:py-20 border-b border-midnight-blue/10 bg-white/60">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-10">
+          About
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+          <div class="md:col-span-1 flex justify-center">
+            <img
+              src="img/logo.jpg"
+              alt="Dickie Lakeshore logo"
+              class="w-40 h-40 rounded-full object-cover border-4 border-canadian-red/30 shadow-md bg-white"
+            >
+          </div>
+          <div class="md:col-span-2 space-y-4 text-midnight-blue/80 leading-relaxed">
+            <!-- TODO: Dickie journal — replace with preferred bio -->
+            <p>
+              <strong class="text-midnight-blue">Dickie Lakeshore</strong> is the stage name of
+              <strong class="text-midnight-blue">Richard Gibbs</strong>, a stand-up comedian based in the Niagara region of Ontario.
+            </p>
+            <p>
+              You’ll find him on the local circuit — Legions, comedy clubs like Spotlight and Yuk Yuk’s Niagara,
+              fundraisers, and alongside friends from the Talkin’ Funny podcast community.
+            </p>
+            <p>
+              He’s appeared on Fort Erie Radio and helped raise money for local journalism and youth theatre —
+              because a good laugh and a good cause go well together.
+            </p>
+            <blockquote class="font-display text-xl sm:text-2xl text-midnight-blue leading-snug border-l-4 border-canadian-red pl-4 my-6">
+              “When people are laughing and having a beverage, they’re generous and they’re happy.”
+            </blockquote>
+            <p class="text-sm text-midnight-blue/50">
+              — Fort Erie Radio comedy fundraiser
+              · <a class="underline hover:text-canadian-red" href="https://forterieradio.ca/funny-money-legion-laughs-fund-fort-eries-only-daily-news-desk/" target="_blank" rel="noopener">Read the story</a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Clips: real YouTube embeds found online -->
+    <!-- Clips -->
     <section id="clips" class="py-16 sm:py-20 border-b border-midnight-blue/10">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-3">
@@ -149,8 +223,7 @@
           Coming Up
         </h2>
         <p class="text-center text-midnight-blue/60 mb-10 max-w-xl mx-auto">
-          Schedule lives in <code class="text-sm bg-midnight-blue/5 px-1 rounded">shows.csv</code> —
-          see <strong>HOW-TO-UPDATE-SHOWS.txt</strong> in this project folder.
+          Catch Dickie live around Niagara and Southern Ontario.
         </p>
         <div id="shows-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <p class="text-midnight-blue/60 col-span-full text-center">Loading shows…</p>
@@ -158,8 +231,44 @@
       </div>
     </section>
 
-    <!-- Press / gallery from Fort Erie Radio coverage -->
-    <section id="press" class="py-16 sm:py-20 border-b border-midnight-blue/10">
+    <!-- Book Me -->
+    <section id="book" class="py-16 sm:py-20 border-b border-midnight-blue/10">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue mb-3">
+          Book Me
+        </h2>
+        <p class="text-midnight-blue/60 mb-8">
+          Looking for a laugh for your club, Legion, fundraiser, or private event?
+        </p>
+        <!-- TODO: Dickie journal — confirm venue types, set lengths, rates, travel -->
+        <ul class="text-left max-w-md mx-auto space-y-3 text-midnight-blue/80 mb-10">
+          <li class="border-l-4 border-canadian-red pl-4">Comedy clubs &amp; open-mic rooms</li>
+          <li class="border-l-4 border-canadian-red pl-4">Legions and community halls</li>
+          <li class="border-l-4 border-canadian-red pl-4">Fundraisers and charity nights</li>
+          <li class="border-l-4 border-canadian-red pl-4">Private events in Niagara / Southern Ontario</li>
+        </ul>
+        <p class="text-sm text-midnight-blue/50 mb-8">
+          Set lengths and rates — contact for details. Travel from the Niagara region.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="mailto:richard.gibbs2016@gmail.com?subject=Booking%20Inquiry"
+            class="inline-block bg-canadian-red hover:bg-red-800 text-white font-semibold py-3 px-6 rounded transition-colors"
+          >
+            Email to Book
+          </a>
+          <a
+            href="tel:+19057143622"
+            class="inline-block border-2 border-midnight-blue hover:border-canadian-red hover:text-canadian-red font-semibold py-3 px-6 rounded transition-colors"
+          >
+            Call 905-714-3622
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press -->
+    <section id="press" class="py-16 sm:py-20 border-b border-midnight-blue/10 bg-white/50">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-3">
           Press
@@ -224,65 +333,36 @@
         </p>
       </div>
     </section>
-
-    <!-- Merch placeholders -->
-    <section id="merch" class="py-16 sm:py-20 border-b border-midnight-blue/10">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-midnight-blue text-center mb-10">
-          Merch
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="bg-white rounded-lg shadow-md border border-midnight-blue/10 overflow-hidden">
-            <div class="aspect-square bg-midnight-blue/5 flex items-center justify-center text-midnight-blue/30 font-display text-lg">
-              T-Shirt
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-semibold">Lakeshore Tee</h3>
-              <p class="mt-2 text-midnight-blue/60">Coming Soon</p>
-            </div>
-          </article>
-          <article class="bg-white rounded-lg shadow-md border border-midnight-blue/10 overflow-hidden">
-            <div class="aspect-square bg-midnight-blue/5 flex items-center justify-center text-midnight-blue/30 font-display text-lg">
-              Hat
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-semibold">FUNNY Cap</h3>
-              <p class="mt-2 text-midnight-blue/60">Coming Soon</p>
-            </div>
-          </article>
-          <article class="bg-white rounded-lg shadow-md border border-midnight-blue/10 overflow-hidden">
-            <div class="aspect-square bg-midnight-blue/5 flex items-center justify-center text-midnight-blue/30 font-display text-lg">
-              Mug
-            </div>
-            <div class="p-5">
-              <h3 class="font-display text-xl font-semibold">Morning Laugh Mug</h3>
-              <p class="mt-2 text-midnight-blue/60">Coming Soon</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer id="footer" class="bg-midnight-blue text-off-white py-12">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="font-display text-2xl font-bold mb-6">Get in Touch</h2>
+      <h2 class="font-display text-2xl font-bold mb-2">Get in Touch</h2>
+      <p class="text-off-white/70 text-sm mb-6">Bookings &amp; media inquiries welcome.</p>
       <p class="mb-2">
         <a href="mailto:richard.gibbs2016@gmail.com" class="hover:text-canadian-red transition-colors">
           richard.gibbs2016@gmail.com
         </a>
       </p>
-      <p class="mb-8">
+      <p class="mb-6">
         <a href="tel:+19057143622" class="hover:text-canadian-red transition-colors">
           905-714-3622
         </a>
       </p>
-      <div class="flex justify-center gap-6 text-sm">
+      <nav aria-label="Footer" class="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm mb-6">
+        <a href="#about" class="hover:text-canadian-red transition-colors">About</a>
+        <a href="#clips" class="hover:text-canadian-red transition-colors">Clips</a>
+        <a href="#shows" class="hover:text-canadian-red transition-colors">Shows</a>
+        <a href="#book" class="hover:text-canadian-red transition-colors">Book</a>
+        <a href="#press" class="hover:text-canadian-red transition-colors">Press</a>
+      </nav>
+      <div class="flex justify-center gap-6 text-sm mb-6">
         <a href="https://www.instagram.com/dickie.lakeshore/" class="hover:text-canadian-red transition-colors" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
         <a href="https://www.youtube.com/watch?v=LYTE6BoJhq4" class="hover:text-canadian-red transition-colors" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
         <a href="https://forterieradio.ca/" class="hover:text-canadian-red transition-colors" target="_blank" rel="noopener" aria-label="Fort Erie Radio">Fort Erie Radio</a>
       </div>
-      <p class="mt-10 text-off-white/50 text-sm">
+      <p class="text-off-white/50 text-sm mb-4">Merch available in person at shows.</p>
+      <p class="text-off-white/40 text-sm">
         &copy; <span id="year"></span> Dickie Lakeshore (Richard Gibbs). All rights reserved.
       </p>
     </div>

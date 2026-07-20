@@ -1,0 +1,22 @@
+---
+description: Shows CSV data source, parsing, and maintainer docs
+globs: "{app.js,shows.csv,HOW-TO-UPDATE-SHOWS.txt}"
+alwaysApply: false
+---
+
+# Shows Data
+
+## Source
+- Default: local `shows.csv` (headers: `Title,Date,Location,Link`)
+- Production option: set `SHOWS_CSV_URL` in `app.js` to a published Google Sheets CSV
+- Maintainer guide: `HOW-TO-UPDATE-SHOWS.txt` (not linked on the public site)
+
+## Parsing rules
+- Simple comma-split — avoid commas inside Location names
+- Empty `Link` → no Buy Tickets button
+- Filter out shows with `Date` before today
+- Sort remaining shows by date ascending
+- Escape HTML when rendering CSV fields into the DOM
+
+## Public UI
+- Section `#shows` — user-facing copy only ("Coming Up"), no file paths

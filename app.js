@@ -10,6 +10,7 @@
  * 3. Paste the published URL into SHOWS_CSV_URL below
  *
  * Note: Avoid commas in Location names — the parser splits on commas.
+ * See HOW-TO-UPDATE-SHOWS.txt for maintainer steps (not linked on the public site).
  */
 
 // Set to your published Google Sheets CSV URL in production.
@@ -18,6 +19,16 @@ const SHOWS_CSV_URL = '';
 const SHOWS_CSV_FALLBACK = 'shows.csv';
 
 const showsContainer = document.getElementById('shows-container');
+
+/** Escape text for safe insertion into HTML. */
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 
 /**
  * Fetch CSV text from the configured URL or local fallback file.
@@ -38,7 +49,7 @@ async function fetchShows() {
  * First row is treated as headers; remaining rows become show entries.
  */
 function parseCSV(text) {
-  const lines = text.trim().split('\n').filter((line) => line.trim() !== '');
+  const lines = text.trim().split(/\r?\n/).filter((line) => line.trim() !== '');
 
   if (lines.length < 2) {
     return [];
@@ -58,13 +69,41 @@ function parseCSV(text) {
   });
 }
 
+/** Start of local today (midnight) for date comparisons. */
+function startOfToday() {
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+}
+
+/**
+ * Keep shows on or after today, sorted ascending by date.
+ * Invalid/missing dates are dropped.
+ */
+function upcomingShows(shows) {
+  const today = startOfToday();
+
+  return shows
+    .filter((show) => {
+      if (!show.Date) return false;
+      const d = new Date(show.Date + 'T00:00:00');
+      if (Number.isNaN(d.getTime())) return false;
+      return d >= today;
+    })
+    .sort((a, b) => new Date(a.Date) - new Date(b.Date));
+}
+
 /**
  * Build HTML for a single show card.
  * Only shows "Buy Tickets" when the Link column has a value.
  */
 function createShowCard(show) {
+  const title = escapeHtml(show.Title);
+  const date = escapeHtml(show.Date);
+  const location = escapeHtml(show.Location);
+  const link = escapeHtml(show.Link);
+
   const ticketButton = show.Link
-    ? `<a href="${show.Link}" target="_blank" rel="noopener"
+    ? `<a href="${link}" target="_blank" rel="noopener"
          class="inline-block mt-4 bg-canadian-red hover:bg-red-800 text-white font-semibold py-2 px-5 rounded transition-colors text-sm">
          Buy Tickets
        </a>`
@@ -72,9 +111,9 @@ function createShowCard(show) {
 
   return `
     <article class="bg-white rounded-lg shadow-md border-l-4 border-canadian-red p-6 flex flex-col">
-      <p class="text-canadian-red font-semibold text-sm uppercase tracking-wide">${show.Date}</p>
-      <h3 class="font-display text-xl font-bold text-midnight-blue mt-2">${show.Title}</h3>
-      <p class="text-midnight-blue/70 mt-2 flex-grow">${show.Location}</p>
+      <p class="text-canadian-red font-semibold text-sm uppercase tracking-wide">${date}</p>
+      <h3 class="font-display text-xl font-bold text-midnight-blue mt-2">${title}</h3>
+      <p class="text-midnight-blue/70 mt-2 flex-grow">${location}</p>
       ${ticketButton}
     </article>
   `;
@@ -102,12 +141,12 @@ function renderError() {
 }
 
 /**
- * Initialize: fetch, parse, and render shows on page load.
+ * Initialize: fetch, parse, filter past dates, and render shows on page load.
  */
 async function init() {
   try {
     const csvText = await fetchShows();
-    const shows = parseCSV(csvText);
+    const shows = upcomingShows(parseCSV(csvText));
     renderShows(shows);
   } catch (error) {
     console.error('Error loading shows:', error);

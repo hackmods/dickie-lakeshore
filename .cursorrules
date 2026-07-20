@@ -1,24 +1,45 @@
 # Project: Dickie Lakeshore Portfolio
-# Client: Richard Gibbs (65-year-old comedian, non-technical)
+# Client: Richard Gibbs / stage name Dickie Lakeshore (non-technical; ~65)
 
 ## Tech Stack Rules (STRICT)
 - Use ONLY Vanilla HTML5, Vanilla JavaScript, and Tailwind CSS (via CDN).
-- NO build tools, NO Node.js, NO React, NO bundlers, NO npm. 
-- The site must be able to run by simply double-clicking `index.html`.
+- NO build tools, NO Node.js, NO React, NO bundlers, NO npm.
+- The site must be able to run by simply double-clicking `index.html` (note: `fetch` for shows needs a static host or local server).
 - Keep code extremely simple, semantic, and well-commented.
 
 ## Visual Identity
 - Vibe: Canadian cottage country, rustic, classic stand-up.
-- Colors: 
+- Colors:
   - Primary: "Canadian Red" (#c8102e)
   - Secondary: "Midnight Blue" (#00203f)
   - Background: "Crisp Off-White" (#f9f9f9)
 - Typography: Playfair Display (Headers), Inter (Body).
 
 ## Core Functionality: The Shows List
-- Upcoming shows are dynamically loaded via Vanilla JS.
-- Data source: A published Google Sheets CSV URL.
+- Upcoming shows are dynamically loaded via Vanilla JS from `shows.csv` (or a published Google Sheets CSV URL in `app.js`).
+- Past-dated rows must be filtered out; remaining shows sorted by date ascending.
 - DO NOT suggest complex databases or backends.
+- Maintainer how-to: `HOW-TO-UPDATE-SHOWS.txt` — never surface this on the public page.
 
-## Context 
+## Merch Policy
+- Merch is sold IN PERSON at shows only.
+- Do NOT add an online store, product grid, or Shopify.
+- Online merch is a FUTURE GOAL — track in `docs/DICKIE-JOURNAL.md` until Dickie asks for it.
+- Footer may note: "Merch available in person at shows."
+
+## Hosting
+- Proxmox LXC CT 112 (`dickie-lakeshore`), LAN: http://192.168.0.61/ — refresh with `git -C /var/www/dickie-lakeshore pull`
+- CapRover path exists via `.github/workflows/deploy.yml` (needs GitHub secrets when ready)
+- Repo: https://github.com/hackmods/dickie-lakeshore
+
+## Contact (public)
+- Email: richard.gibbs2016@gmail.com
+- Phone: 905-714-3622
+- Instagram: https://www.instagram.com/dickie.lakeshore/
+
+## Knowledge Transfer
+- Living journal: `docs/DICKIE-JOURNAL.md` — read before content edits; log session decisions there.
+- Content checklist: `docs/CONTENT-CHECKLIST.md`
+
+## Context
 When writing code or suggesting changes, remember the end user is not tech-savvy. Solutions must be maintenance-free or use the Google Sheets CSV trick.

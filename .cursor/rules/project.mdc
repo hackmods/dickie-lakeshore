@@ -1,0 +1,31 @@
+---
+description: Dickie Lakeshore portfolio — stack, client, merch, and content conventions
+alwaysApply: true
+---
+
+# Dickie Lakeshore — Project Rules
+
+## Client
+- Stage name: **Dickie Lakeshore**
+- Legal name: **Richard Gibbs**
+- Non-technical; prefer maintenance-free workflows (CSV / Google Sheets)
+
+## Stack (STRICT)
+- Vanilla HTML5 + Vanilla JS + Tailwind via CDN only
+- No Node, npm, React, bundlers, or build tools
+- Single-page site: `index.html` with section anchors
+
+## Merch
+- **In person at shows only** — no online store or product grid
+- Online merch = **future goal** (see `docs/DICKIE-JOURNAL.md`)
+- Optional footer: "Merch available in person at shows."
+
+## Content
+- Before changing bio/booking/clips copy, read `docs/DICKIE-JOURNAL.md`
+- Mark unverified copy with `<!-- TODO: Dickie journal -->`
+- Do not invent testimonials or fake show dates
+- Do not expose `shows.csv` or HOW-TO paths on the public UI
+
+## SEO conventions
+- Keep Open Graph, Twitter Card, and JSON-LD `Person` in sync when contact/socials change
+- Favicon uses `img/logo.jpg`
